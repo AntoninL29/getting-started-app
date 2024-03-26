@@ -1,3 +1,10 @@
-#
-name: build and push image
+#Déclencher le build d'une nouvelles image docker en utilisant dockerfile
+#et faire un push vers dockerHub
+name: build-push-image
+run-name: ${{ github.actor }} is learning Github Actions
 on: [push]
+jobs:
+    check-bats-version:
+      runs-on: ubuntu-latest
+      steps :
+        - uses: actions/checkout@v3
