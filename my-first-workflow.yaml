@@ -1,0 +1,3 @@
+# Qui utilise un Dockerfile pour une image
+# build une image et la pousser sur docker hub
+# il se déclenche au push sur la branche main
