@@ -27,7 +27,7 @@ jobs:
       uses: docker/setup-buildx-action@v2
 
     - name: Build Docker image
-      run: docker build -t antoninlh/getting-started-app:latest -f docker/Dockerfile .
+      run: docker build -t antoninlh/getting-started-app:latest .
 
     - name: Push Docker image
       run: docker push antoninlh/getting-started-app:latest
