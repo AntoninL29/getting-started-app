@@ -7,7 +7,7 @@ name: Docker Build and Push
 on:
   push:
     branches:
-      - main  # Branche principale de votre dépôt
+      - main
 
 jobs:
   build:
@@ -27,7 +27,7 @@ jobs:
       uses: docker/setup-buildx-action@v2
 
     - name: Build Docker image
-      run: docker build -t antoninlh/getting-started-app:latest -f app/Dockerfile app
+      run: docker build -t antoninlh/getting-started-app:latest -f src/Dockerfile src
 
     - name: Push Docker image
       run: docker push antoninlh/getting-started-app:latest
